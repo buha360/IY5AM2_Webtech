@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weboldalam</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+
+    <header id="hideHeader">
+      <a class="WD-logo-a"><img class="WD-logo" src="logo/wd_logo.png" alt="WD_logo" /></a>
+
+      <ul class="navbar">
+        <li class="navbar-list-items"><a href="index.html">Home</a></li>
+        <li class="navbar-list-items"><a href="form.html">Form</a></li>
+        <li class="navbar-list-items"><a href="items.html">Items</a></li>
+        <li class="navbar-list-items"><a href="lists.html" class="active">Lists</a></li>
+      </ul>
+    </header>
+  </head>
+
+  <body>
+    <div id="preloader" class="center">
+      <div class="ring"></div>
+      <span>töltés...</span>
+    </div>
+    <br /><br /><br /><br /><br /><br />
+    <section class="container">
+      <h1>Listák, gombok</h1>
+      <div class="list-content">
+        <h5>Gyümölcsök</h5>
+        <ul>
+          <li>Alma</li>
+          <li>Körte</li>
+          <li>Cseresznye</li>
+          <li>Málna</li>
+        </ul>
+      </div>
+      <br /><br />
+      <h5>Paprikás Csirke recept</h5>
+      <button class="btn" onclick="toggleRecipeVisibility()">Recept megtekintése</button>
+      <div class="recept" style="display: none">
+        <div class="hozzavalok">
+          <br />
+          <h6>Hozzávalók</h6>
+          <ol>
+            <li>4 csirkemellfilé</li>
+            <li>2 közepes hagyma</li>
+            <li>2 evőkanál pirospaprika</li>
+            <li>2 dl tejföl</li>
+            <li>2 evőkanál liszt</li>
+            <li>3 evőkanál olaj</li>
+            <li>1 csokor petrezselyem</li>
+            <li>só és bors ízlés szerint</li>
+          </ol>
+        </div>
+        <div class="elkeszites">
+          <br />
+          <h6>Elkészítés</h6>
+          <ol>
+            <li>A hagymákat apróra vágjuk és olajon megdinszteljük. Amikor aranybarna, hozzáadjuk a pirospaprikát, és egy kevés vizet.</li>
+            <li>A csirkemelleket besózzuk, borsozzuk, majd a hagymás alaphoz adjuk és mindkét oldalát megpirítjuk.</li>
+            <li>Ezt követően annyi vízzel öntjük fel, hogy ellepje, és fedő alatt puhára pároljuk.</li>
+            <li>Amikor a csirke már majdnem kész, a tejfölt simára keverjük a liszttel és a pörkölt levével, majd hozzáadjuk a csirkéhez.</li>
+            <li>Az ételt még néhány percig főzzük, míg a mártás sűrű nem lesz. Petrezselyemmel megszórva tálaljuk.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function toggleRecipeVisibility() {
+        var recipeDiv = document.querySelector(".recept");
+        if (recipeDiv.style.display === "none") {
+          recipeDiv.style.display = "block";
+        } else {
+          recipeDiv.style.display = "none";
+        }
+      }
+    </script>
+
+    <script type="text/javascript" src="script.js"></script>
+
+    <!--Legalulra kell tenni és akkor biztosan nem lesz bugos!-->
+  </body>
+</html>
